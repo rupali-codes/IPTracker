@@ -41,7 +41,7 @@ const timezone = document.querySelector('.timezone');
 const isp = document.querySelector('.isp'); 
 
 
-go.addEventListener('click', async function(){
+go.addEventListener('click', function(){
 	const ip = ipAdd.value;
 	
 	fetch(`http://ip-api.com/json/${ip}`)
@@ -57,17 +57,6 @@ go.addEventListener('click', async function(){
 		isp.textContent = data.isp;
 	})
 	.catch(err => alert(err.message))
-
-	// const res = await fetch(`http://ip-api.com/json/${ip}`);
-	// const data = await res.json();
-	// if(!data){
-	// 	throw new Error("Invalid IP Address");
-	// }
-	// showIP.textContent = data.query;
-	// address.textContent = data.city + ", " + data.country;
-	// timezone.textContent = data.timezone;
-	// isp.textContent = data.isp;
-
 
 })
 
