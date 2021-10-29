@@ -36,6 +36,7 @@ body {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-right: 0px;
+    text-align: center;
 }
 
 #go {
@@ -111,4 +112,7 @@ body {
     .search {
         transform: translate(0%, 100%);
     }
+    #ip {
+	    width: 200px;
+	}
 }
