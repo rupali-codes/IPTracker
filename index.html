@@ -7,6 +7,9 @@
 
     <title>IP Address Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -18,7 +21,11 @@
                     IP Address Tracker
                 </p>
                 <div>
+
+                    <input type="text" placeholder="Input an Ip address" id="ip">
+
                     <input type="text" id="ip">
+
                     <button id="go">Go!</button>
                 </div>
             </div>
@@ -46,6 +53,11 @@
             </div>
         </div>
     </div>
+
+
+    <div id='map' style='width: 100%; height: 560px; z-index: -1;'></div>
+
+    <script src="script.js"></script>
     <div class="map">
       <!-- we will change this later -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55627.39914359178!2d78.10441980594788!3d29.378707719123213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bee6a893390f9%3A0x9bbd471db27ea08f!2sBijnor%2C%20Uttar%20Pradesh%20246701!5e0!3m2!1sen!2sin!4v1635186820315!5m2!1sen!2sin"
@@ -57,5 +69,7 @@
   </div> -->
   <script src="script.js"></script>
 </body>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+<script src="data.js"></script>
 
 </html>
