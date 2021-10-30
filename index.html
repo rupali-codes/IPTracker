@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>IP Address Tracker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>IP Address Tracker</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
-
+  <!-- leafletJS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  
+  <!-- rupsJS -->
+  <script defer src="script.js"></script>
 </head>
-
 <body>
     <div class="main">
+      <p class="heading">
+        IP Address Tracker
+      </p>
 
-        <div class="search">
-            <div>
-                <p class="heading">
-                    IP Address Tracker
-                </p>
-                <div>
+      <div class="search">
+        <input type="text" id="ip" placeholder="Enter IP Address">
+        <button id="go">Go!</button>
+      </div>
 
-                    <input type="text" placeholder="Input an Ip address" id="ip">
-                    <button id="go">Go!</button>
-                </div>
-            </div>
+      <div class="details">
+        <div  class="border-right">
+          IP ADDRESS <br>
+          <p class="ip out">...loading</p>
         </div>
 
-        <div class="details">
-            <div class="border-right">
-                IP ADDRESS <br>
-                <p class="ip out">...loading</p>
-            </div>
-
-            <div class="border-right">
-                LOCATION<br>
-                <p class="add out">...loading</p>
-            </div>
-
-            <div class="border-right">
-                TIMEZONE <br>
-                <p class="timezone out">...loading</p>
-            </div>
-
-            <div class="border-right">
-                Orgnization<br>
-                <p class="cc out">...loading</p>
-            </div>
+        <div  class="border-right">
+          LOCATION<br>
+          <p class="add out">...loading</p>
         </div>
+
+        <div  class="border-right">
+          TIMEZONE <br>
+          <p class="timezone out">...loading</p>
+        </div>
+
+        <div class="border-right">
+         Orgnization<br>
+          <p class="cc out">...loading</p>
+        </div>
+      </div>
     </div>
+    <!-- container to show map -->
+    <div id="map"></div>
 
-
-    <div id='map' style='width: 100%; height: 560px; z-index: -1;'></div>
-<!--   <script src="data.js"></script> -->
-        <script src="script.js"></script>
 </body>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
-
 </html>
