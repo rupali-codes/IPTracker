@@ -1,6 +1,7 @@
 class Details {
     constructor(ip) {
-        this.url = `http://ip-api.com/json/${ip}`;
+//         this.url = `http://ip-api.com/json/${ip}`;
+           this.url = `https://ipapi.co/${ip}/json/`;
     }
 
     async getIP() {
@@ -19,7 +20,7 @@ const ipAdd = document.querySelector('#ip');
 const showIP = document.querySelector('.ip');
 const address = document.querySelector('.add');
 const timezone = document.querySelector('.timezone');
-const isp = document.querySelector('.isp');
+const cc = document.querySelector('.cc');
 
 
 go.addEventListener('click', e => {
@@ -29,10 +30,17 @@ go.addEventListener('click', e => {
 
     details.getIP()
         .then(data => {
-            showIP.textContent = data.json.query;
-            address.textContent = data.json.city + ", " + data.json.country;
+//             showIP.textContent = data.json.query;
+//             address.textContent = data.json.city + ", " + data.json.country;
+//             timezone.textContent = data.json.timezone;
+//             isp.textContent = data.json.isp;
+            
+            //as per our new api
+            showIP.textContent = data.json.ip;
+            address.textContent = data.json.city + ", " + data.json.region + ", " + data.json.country_name;
             timezone.textContent = data.json.timezone;
-            isp.textContent = data.json.isp;
+            cc.textContent = data.json.org;
+        
             let lat = data.json.lat;
             let lon = data.json.lon;
             console.log(data.json.lat)
