@@ -7,6 +7,9 @@
 body {
     font-size: 18px;
     font-family: 'Sora', sans-serif;
+    background-image: url(images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .heading {
@@ -17,9 +20,6 @@ body {
 
 .main {
     text-align: center;
-    background-image: url(images/pattern-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     padding: .2px;
 }
@@ -81,12 +81,11 @@ body {
     font-weight: bold;
 }
 
-.map {
-    height: 500px;
-    width: 100%;
-    background-color: grey;
+#map {
+  height: 560px;
+  margin-top: 80px;
+  background-color: white;
 }
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -102,9 +101,13 @@ body {
     }
     .details {
         padding-left: 0%;
-        transform: translateY(50%);
+        transform: translateY(30%);
         width: 80%;
         margin: auto;
+    }
+    #map {
+      height: 400px;
+      margin-top: 9rem;
     }
 }
 
@@ -115,4 +118,5 @@ body {
     #ip {
 	    width: 200px;
 	}
+
 }
