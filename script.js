@@ -41,4 +41,6 @@ go.addEventListener('click', async function() {
 
         })
         .catch(err => alert(err.message))
+        
+        ipAdd.value = '';
 })
