@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>IP Address Tracker</title>
   
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" type="image/jpg" href="images/Globe_logo.jpg">
   
   <!-- leafletJS -->
@@ -17,7 +17,7 @@
   crossorigin=""></script>
   
   <!-- rupsJS -->
-  <script defer src="script.js"></script>
+  <script defer src="scripts/script.js"></script>
 </head>
 <body>
     <div class="main">
@@ -33,27 +33,30 @@
       <div class="details">
         <div  class="border-right">
           IP ADDRESS <br>
-          <p class="ip out">...loading</p>
+          <p class="ip out">..waiting</p>
         </div>
 
         <div  class="border-right">
           LOCATION<br>
-          <p class="add out">...loading</p>
+          <p class="add out">..waiting</p>
         </div>
 
         <div  class="border-right">
           TIMEZONE <br>
-          <p class="timezone out">...loading</p>
+          <p class="timezone out">..waiting</p>
         </div>
 
         <div class="border-right">
          Orgnization<br>
-          <p class="cc out">...loading</p>
+          <p class="cc out">...waiting</p>
         </div>
       </div>
     </div>
     <!-- container to show map -->
     <div id="map"></div>
 
+    <footer>
+      A design giude from <a href="https://frontendmentor.io">Frontend Mentor</a> Developed By <a href="https://twitter.com/rupali_codes">Rupali Haldiya</a>.
+    </footer>
 </body>
 </html>
